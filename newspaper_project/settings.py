@@ -38,7 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #ours
     'users.apps.UsersConfig',
+    'pages.apps.PagesConfig',
+    #3rd party
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -56,7 +60,7 @@ ROOT_URLCONF = 'newspaper_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -130,3 +134,16 @@ sentry_sdk.init(
     dsn=config('dsn'),
     integrations=[DjangoIntegration()]
 )
+
+
+#Custom users
+AUTH_USER_MODEL = "users.CustomUser"
+
+
+#LOGIN AND LOGOUT FUNCTIONALITY
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
+
+
+#django-crispy-form integrations
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
