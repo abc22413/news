@@ -33,7 +33,6 @@ INSTALLED_APPS = [
     #3rd party
     'crispy_forms',#Make HTML forms nicer
     'profanity',#protect against profanity
-    'django_referrer_policy.middleware.ReferrerPolicyMiddleware',#Referral policy
 ]
 
 MIDDLEWARE = [
@@ -44,6 +43,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django_referrer_policy.middleware.ReferrerPolicyMiddleware',#Referral policy
 ]
 
 ROOT_URLCONF = 'newspaper_project.urls'
