@@ -174,6 +174,10 @@ CSP_SCRIPT_SRC = "'self'"
 CSP_STYLE_SRC = "'self'"
 CSP_BASE_URI = "'self'"
 
+'''
+ default-src 'none'; form-action 'self'; img-src 'self'; script-src https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js https://code.jquery.com/jquery-3.3.1.slim.min.js https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js; style-src https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/ 
+'''
+
 
 #REFERRER POLICY
 REFERRER_POLICY = 'strict-origin'
