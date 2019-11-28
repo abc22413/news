@@ -8,7 +8,6 @@ verify_ssl = true
 [packages]
 django = "*"
 python-decouple = "*"
-whitenoise = "*"
 gunicorn = "*"
 sentry-sdk = "*"
 django-csp = "*"
