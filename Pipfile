@@ -13,6 +13,7 @@ sentry-sdk = "*"
 django-csp = "*"
 django-crispy-forms = "*"
 django-profanity-filter = "*"
+django-referrer-policy = "*"
 
 [requires]
 python_version = "3.8"
