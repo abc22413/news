@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'articles.apps.ArticlesConfig',
     #3rd party
-    'crispy_forms',
+    'crispy_forms',#Make HTML forms nicer
+    'profanity',#protect against profanity
 ]
 
 MIDDLEWARE = [

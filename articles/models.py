@@ -2,10 +2,12 @@ from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.db import models
 from django.urls import reverse
+#3rd party
+from profanity.validators import validate_is_profane
 
 class Article(models.Model):
-    title = models.CharField(max_length=255)
-    body = models.TextField()
+    title = models.CharField(max_length=255, validators=[validate_is_profane])
+    body = models.TextField(validators=[validate_is_profane])
     date = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(
         get_user_model(),
@@ -24,7 +26,7 @@ class Comment(models.Model):
         on_delete=models.CASCADE,
         related_name='comments',
     )
-    comment = models.CharField(max_length=140)
+    comment = models.CharField(max_length=140, validators=[validate_is_profane])
     author = models.ForeignKey(
         get_user_model(),
         on_delete = models.CASCADE,
