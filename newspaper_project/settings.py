@@ -181,7 +181,8 @@ CSP_STYLE_SRC =[
     "'self'",
     "https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/",
 ]
-
+CSP_FRAME_ANCESTOR = "'self'"
+CSP_FEATURE_POLICY = "'self'"
 '''
  default-src 'none'; font-src 'self'; form-action 'self'; img-src 'self'; script-src 'self' https://browser.sentry-cdn.com/5.9.1/bundle.min.js https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js https://code.jquery.com/jquery-3.3.1.slim.min.js https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js; style-src 'self' https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/
 '''
