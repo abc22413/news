@@ -20,6 +20,12 @@ class Article(models.Model):
     def get_absolute_url(self):
         return reverse('article_detail', args=[str(self.id)])
 
+    def sumup(self):
+        if len(body)>140:
+            return body[:137]+'...'
+        else:
+            return body
+
 class Comment(models.Model):
     article = models.ForeignKey(
         Article,

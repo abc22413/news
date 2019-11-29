@@ -13,8 +13,8 @@
         {{ article.date }}</span>
       </div>
       <div class="card-body">
-        <p>{{ article.body }}</p>
-        <a class="btn btn-info" href="{% url 'article_edit' article.pk %}">Edit</a> | <a class="btn btn-danger" href="{% url 'article_delete' article.pk %}">Delete</a>
+        <p>{{ article.sumup() }}</p>
+        <a class="btn btn-info" href="{% url 'article_detail' article.pk %}">Read More</a>
       </div>
       <div class="card-footer">
         {% for comment in article.comments.all %}
