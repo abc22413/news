@@ -10,5 +10,3 @@ urlpatterns = [
     path('articles/', include('articles.urls')),
     path('', include('pages.urls')),
 ]
-
-handler500 = 'articles.views.handler500'

@@ -50,11 +50,3 @@ class ArticleCreateView(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
-
-from sentry_sdk import last_event_id
-from django.shortcuts import render
-
-def handler500(request, *args, **argv):
-    return render(request, "500.html", {
-        'sentry_event_id': last_event_id(),
-    }, status=500)
