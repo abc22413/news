@@ -11,5 +11,4 @@ urlpatterns = [
     path('', include('pages.urls')),
 ]
 
-#handler404 = 'articles.views.handler404'
 handler500 = 'articles.views.handler500'
