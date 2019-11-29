@@ -17,7 +17,7 @@
         <a class="btn btn-info" href="{% url 'article_detail' article.pk %}">Read More</a>
       </div>
       <div class="card-footer">
-        {% if article.comments.all|length>2 %}
+        {% if {{article.comments.all|length}}>2 %}
           {% for comment in article.comments.all|slice:"0:2" %}
           <p>
             <span class="font-weight-bold">{{comment.author}} &middot;</span>
