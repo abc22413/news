@@ -1,6 +1,6 @@
 <!-- templates/article_list.html -->
 {% extends 'base.html' %}
-
+{% load articles_extras %}
 {% block title %}Articles{% endblock title %}
 
 {% block content %}
@@ -13,16 +13,18 @@
         {{ article.date }}</span>
       </div>
       <div class="card-body">
-        <p>{{ article.sumup() }}</p>
+        <p>{{ article.body|sumup }}</p>
         <a class="btn btn-info" href="{% url 'article_detail' article.pk %}">Read More</a>
       </div>
       <div class="card-footer">
-        {% for comment in article.comments.all %}
-        <p>
-          <span class="font-weight-bold">{{comment.author}} &middot;</span>
-          {{comment}}
-        </p>
-        {% endfor %}
+        {% if article.comments.all|length>2 %}
+          {% for comment in article.comments.all|slice:"0:2" %}
+          <p>
+            <span class="font-weight-bold">{{comment.author}} &middot;</span>
+            {{comment}}
+          </p>
+          {% endfor %}
+        {% endif %}
       </div>
     </div>
   <br />
