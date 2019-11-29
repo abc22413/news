@@ -175,10 +175,10 @@ CSP_SCRIPT_SRC = [
     "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js",
 ]
 CSP_STYLE_SRC = "https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/"
-CSP_BASE_URI = "'self'"
-CSP_FRAME_ANCESTORS = "'self'"
-CSP_UPGRADE_INSECURE_REQUESTS = True
-CSP_FEATURE_POLICY = "'self'"
+#CSP_BASE_URI = "'self'"
+#CSP_FRAME_ANCESTORS = "'self'"
+#CSP_UPGRADE_INSECURE_REQUESTS = True
+#CSP_FEATURE_POLICY = "'self'"
 
 
 #REFERRER POLICY
