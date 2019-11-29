@@ -1,7 +1,5 @@
 TODO:-
 - Link to details page
-- Views: Show small excerpt
-- Comments: Show a few
 - Comments: Add comments framework
 - User age-limit
 - SECURITY: MAKE CSP WORK

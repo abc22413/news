@@ -17,14 +17,12 @@
         <a class="btn btn-info" href="{% url 'article_detail' article.pk %}">Read More</a>
       </div>
       <div class="card-footer">
-        <!--{% if {article.comments.all|length} > 2 %}-->
-          {% for comment in article.comments.all|cutup %}
-          <p>
-            <span class="font-weight-bold">{{comment.author}} &middot;</span>
-            {{comment}}
-          </p>
-          {% endfor %}
-        <!--{% endif %}-->
+        {% for comment in article.comments.all|cutup %}
+        <p>
+          <span class="font-weight-bold">{{comment.author}} &middot;</span>
+          {{comment}}
+        </p>
+        {% endfor %}
       </div>
     </div>
   <br />
