@@ -13,7 +13,7 @@
         {{ article.date }}</span>
       </div>
       <div class="card-body">
-        <p>{{ article.body|sumup }}</p>
+        <p>{{ article.body|sumupp }}</p>
         <a class="btn btn-info" href="{% url 'article_detail' article.pk %}">Read More</a>
       </div>
       <div class="card-footer">

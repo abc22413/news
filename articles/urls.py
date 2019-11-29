@@ -1,4 +1,5 @@
 from django.urls import *
+from django.conf.urls import *
 from .views import *
 
 urlpatterns = [
@@ -15,3 +16,6 @@ urlpatterns = [
 
     path('', ArticleListView.as_view(), name='article_list'),
 ]
+
+handler404 = articles.views.handler404
+handler500 = articles.views.handler500

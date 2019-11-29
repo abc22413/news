@@ -1,0 +1,8 @@
+<script src="https://browser.sentry-cdn.com/5.9.1/bundle.min.js" integrity="sha384-/x1aHz0nKRd6zVUazsV6CbQvjJvr6zQL2CHbQZf3yoLkezyEtZUpqUNnOLW9Nt3v" crossorigin="anonymous"></script>
+
+{% if sentry_event_id %}
+<script>
+  Sentry.init({ dsn: 'https://b58285a7f22d46c593decf18a1be9bfc@sentry.io/1835898' });
+  Sentry.showReportDialog({ eventId: '{{ sentry_event_id }}' })
+</script>
+{% endif %}

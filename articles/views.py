@@ -1,5 +1,6 @@
 # articles/views.py
 from django.contrib.auth.mixins import *
+from django.conf.urls import *
 from django.views.generic import *
 from django.core.exceptions import *
 from django.views.generic.edit import *
@@ -49,3 +50,9 @@ class ArticleCreateView(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
+
+def handler404(request):
+    return render(request, '404.html', status=404)
+
+def handler500(request):
+    return render(request, '500.html', status=500)
