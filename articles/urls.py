@@ -16,6 +16,3 @@ urlpatterns = [
 
     path('', ArticleListView.as_view(), name='article_list'),
 ]
-
-handler404 = myapp.views.handler404
-handler500 = myapp.views.handler500

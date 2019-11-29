@@ -1,6 +1,5 @@
 # articles/views.py
 from django.contrib.auth.mixins import *
-from django.conf.urls import *
 from django.views.generic import *
 from django.core.exceptions import *
 from django.views.generic.edit import *
