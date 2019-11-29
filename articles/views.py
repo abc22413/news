@@ -5,6 +5,7 @@ from django.core.exceptions import *
 from django.views.generic.edit import *
 from django.urls import *
 from .models import *
+from django.shortcuts import render
 
 class ArticleListView(LoginRequiredMixin, ListView):
     model = Article
