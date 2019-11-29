@@ -160,7 +160,7 @@ SECURE_BROWSER_XSS_FILTER = True
 SECURE_CONTENT_TYPE_NOSNIFF = True
 SECURE_SSL_REDIRECT = True
 X_FRAME_OPTIONS = 'DENY'
-SECURE_HSTS_SECONDS = 15768000
+SECURE_HSTS_SECONDS = 31536000
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_HSTS_PRELOAD = True
 
@@ -175,6 +175,9 @@ CSP_SCRIPT_SRC = [
     "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js",
 ]
 CSP_STYLE_SRC = "https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/"
+CSP_BASE_URI = "'self'"
+CSP_FRAME_ANCESTORS = "'self'"
+CSP_UPGRADE_INSECURE_REQUESTS = True
 
 
 #REFERRER POLICY
