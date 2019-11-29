@@ -1,6 +1,17 @@
 <!-- templates/base.html -->
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- Sentry.io integration -->
+<script src="https://browser.sentry-cdn.com/5.9.1/bundle.min.js" integrity="sha384-/x1aHz0nKRd6zVUazsV6CbQvjJvr6zQL2CHbQZf3yoLkezyEtZUpqUNnOLW9Nt3v" crossorigin="anonymous"></script>
+
+{% if sentry_event_id %}
+  <script>
+    Sentry.init({ dsn: 'https://b58285a7f22d46c593decf18a1be9bfc@sentry.io/1835898' });
+    Sentry.showReportDialog({ eventId: '{{ sentry_event_id }}' })
+  </script>
+{% endif %}
+
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -64,16 +75,5 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-
-      <!-- Sentry.io integration -->
-      <script src="https://browser.sentry-cdn.com/5.9.1/bundle.min.js" integrity="sha384-/x1aHz0nKRd6zVUazsV6CbQvjJvr6zQL2CHbQZf3yoLkezyEtZUpqUNnOLW9Nt3v" crossorigin="anonymous"></script>
-
-      {% if sentry_event_id %}
-        <script>
-          Sentry.init({ dsn: 'https://b58285a7f22d46c593decf18a1be9bfc@sentry.io/1835898' });
-          Sentry.showReportDialog({ eventId: '{{ sentry_event_id }}' })
-        </script>
-      {% endif %}
-      
   </body>
 </html>
