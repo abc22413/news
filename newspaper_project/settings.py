@@ -38,7 +38,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-    'csp.middleware.CSPMiddleware',
+    #'csp.middleware.CSPMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -153,6 +153,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
 #SECURITY-OPTIONS
+'''
 CSRF_COOKIE_SECURE = True
 CSRF_COOKIE_SAMESITE = 'Strict'
 SESSION_COOKIE_SECURE = True
@@ -163,6 +164,7 @@ X_FRAME_OPTIONS = 'DENY'
 SECURE_HSTS_SECONDS = 31536000
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_HSTS_PRELOAD = True
+'''
 
 
 #CSP OPTIONS
@@ -190,4 +192,4 @@ CSP_BASE_URI = "'self'"
 '''
 
 #REFERRER POLICY
-REFERRER_POLICY = 'strict-origin'
+#REFERRER_POLICY = 'strict-origin'

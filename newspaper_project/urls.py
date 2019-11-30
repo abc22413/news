@@ -10,3 +10,5 @@ urlpatterns = [
     path('articles/', include('articles.urls')),
     path('', include('pages.urls')),
 ]
+
+handler500 = 'pages.views.handler500'
