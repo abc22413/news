@@ -2,6 +2,8 @@
 from django import forms
 from django.contrib.auth.forms import *
 from .models import *
+from captcha.fields import ReCaptchaField
+
 class CustomUserCreationForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
         model = CustomUser
