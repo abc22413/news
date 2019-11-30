@@ -1,0 +1,54 @@
+{% load static %}
+{% load pages_extras %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<title>404 Not Found</title>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:900" rel="stylesheet">
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="{% static 'style.css' %}" />
+
+		<script src="https://browser.sentry-cdn.com/5.9.1/bundle.min.js" integrity="sha384-/x1aHz0nKRd6zVUazsV6CbQvjJvr6zQL2CHbQZf3yoLkezyEtZUpqUNnOLW9Nt3v" crossorigin="anonymous"></script>
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+	<link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}" >
+</head>
+
+<body>
+
+	<div id="notfound">
+		<div class="notfound">
+			<div class="notfound-404">
+				<h3>Oops! Page not found</h3>
+				<h1><span>4</span><span>0</span><span>4</span></h1>
+			</div>
+			<h2>we are sorry, but the page you requested was not found</h2>
+			<br>
+			<p><a class="btn btn-dark ml-2" href="{% url 'home' %}">Back to Home</a></p>
+		</div>
+	</div>
+
+	{% if sentry_event_id %}
+  <script>
+    Sentry.init({ dsn: "https://b58285a7f22d46c593decf18a1be9bfc@sentry.io/1835898" });
+    Sentry.showReportDialog({ eventId: '{{ sentry_event_id }}' })
+  </script>
+  {% endif %}
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
