@@ -5,6 +5,7 @@ from django.core.exceptions import *
 from django.views.generic.edit import *
 from django.urls import *
 from .models import *
+from .forms import *
 from django.shortcuts import render
 
 class ArticleListView(LoginRequiredMixin, ListView):
@@ -20,6 +21,7 @@ class ArticleDetailView(LoginRequiredMixin, DetailView): # new
 class ArticleUpdateView(LoginRequiredMixin, UpdateView): # new
     model = Article
     fields = ('title', 'body',)
+    #form_class = ArticleUpdateView
     template_name = 'article_edit.html'
     login_url = 'login'
 
@@ -42,9 +44,10 @@ class ArticleDeleteView(LoginRequiredMixin, DeleteView): # new
         return super().dispatch(request, *args, **kwargs)
 
 class ArticleCreateView(LoginRequiredMixin, CreateView):
-    model = Article
+    #model = Article
     template_name = 'article_new.html'
-    fields = ('title','body',)
+    #fields = ('title','body',)
+    form_class = ArticleCreateForm
     login_url = 'login'
 
     def form_valid(self, form):
