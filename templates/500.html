@@ -7,9 +7,7 @@
 </head>
 
 <body>
-  <h1>SERVER ERROR 500</h1>
   {% if sentry_event_id %}
-  <h2>Triggereed</h2>
   <script>
     Sentry.init({ dsn: 'https://b58285a7f22d46c593decf18a1be9bfc@sentry.io/1835898' });
     Sentry.showReportDialog({ eventId: '{{ sentry_event_id }}' })
