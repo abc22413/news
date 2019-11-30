@@ -191,6 +191,8 @@ CSP_STYLE_SRC = [
     "https://fonts.googleapis.com/",
     "https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/",
 ]
+CSP_BASE_URI = "'self'"
+CSP_FRAME_ANCESTORS = "'self'"
 
 '''
   default-src 'none'; font-src https://fonts.gstatic.com; form-action 'self'; frame-src https://www.google.com; img-src 'self' data:; script-src 'unsafe-inline' https://browser.sentry-cdn.com/5.9.1/bundle.min.js https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js https://code.jquery.com/jquery-3.3.1.slim.min.js https://sentry.io/api/embed/error-page/ https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js https://www.google.com/recaptcha/api.js https://www.gstatic.com/recaptcha/releases/75nbHAdFrusJCwoMVGTXoHoM/recaptcha__en.js; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/
