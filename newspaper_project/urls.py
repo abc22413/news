@@ -12,4 +12,3 @@ urlpatterns = [
 ]
 
 handler500 = 'pages.views.handler500'
-handler404 = 'pages.views.handler404'
