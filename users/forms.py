@@ -7,7 +7,6 @@ from captcha.fields import ReCaptchaField
 class CustomUserCreationForm(UserCreationForm):
     captcha = ReCaptchaField()
     class Meta(UserCreationForm.Meta):
-        #captcha = ReCaptchaField()
         model = CustomUser
         fields = ('username', 'email', 'age',)
 
