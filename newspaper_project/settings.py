@@ -176,7 +176,7 @@ CSP_FORM_ACTION = "'self'"
 CSP_FRAME_SRC = "https://www.google.com"
 CSP_IMG_SRC = "'self'"
 CSP_SCRIPT_SRC = [
-    #"'unsafe-inline'",
+    "'unsafe-inline'",
     "https://browser.sentry-cdn.com/5.9.1/bundle.min.js",
     "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js",
     "https://code.jquery.com/jquery-3.3.1.slim.min.js",
@@ -187,7 +187,7 @@ CSP_SCRIPT_SRC = [
 ]
 CSP_STYLE_SRC = [
     "'self'",
-    #"'unsafe-inline'",
+    "'unsafe-inline'",
     "https://fonts.googleapis.com/",
     "https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/",
 ]
