@@ -171,26 +171,29 @@ SECURE_HSTS_PRELOAD = True
 
 #CSP OPTIONS
 CSP_DEFAULT_SRC = "'none'"
-CSP_FONT_SRC = "'self'"
+CSP_FONT_SRC = "https://fonts.gstatic.com"
 CSP_FORM_ACTION = "'self'"
+CSP_FRAME_SRC = "https://www.google.com"
 CSP_IMG_SRC = "'self'"
 CSP_SCRIPT_SRC = [
-    "'self'",
+    "'unsafe-inline'",
     "https://browser.sentry-cdn.com/5.9.1/bundle.min.js",
     "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js",
     "https://code.jquery.com/jquery-3.3.1.slim.min.js",
+    "https://sentry.io/api/embed/error-page/",
     "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js",
+    "https://www.google.com/recaptcha/api.js",
+    "https://www.gstatic.com/recaptcha/releases/75nbHAdFrusJCwoMVGTXoHoM/recaptcha__en.js",
 ]
-CSP_STYLE_SRC =[
+CSP_STYLE_SRC = [
     "'self'",
+    "'unsafe-inline'",
+    "https://fonts.googleapis.com/",
     "https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/",
 ]
-CSP_FRAME_ANCESTORS = "'self'"
-CSP_FEATURE_POLICY = "'self'"
-CSP_BASE_URI = "'self'"
 
 '''
- default-src 'none'; font-src 'self'; form-action 'self'; img-src 'self'; script-src 'self' https://browser.sentry-cdn.com/5.9.1/bundle.min.js https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js https://code.jquery.com/jquery-3.3.1.slim.min.js https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js; style-src 'self' https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/
+  default-src 'none'; font-src https://fonts.gstatic.com; form-action 'self'; frame-src https://www.google.com; img-src 'self' data:; script-src 'unsafe-inline' https://browser.sentry-cdn.com/5.9.1/bundle.min.js https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js https://code.jquery.com/jquery-3.3.1.slim.min.js https://sentry.io/api/embed/error-page/ https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js https://www.google.com/recaptcha/api.js https://www.gstatic.com/recaptcha/releases/75nbHAdFrusJCwoMVGTXoHoM/recaptcha__en.js; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/
 '''
 
 
