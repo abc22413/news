@@ -1,4 +1,5 @@
 {% load static %}
+{% load pages_extras %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,37 +35,17 @@
 			</div>
 			<h2>We are sorry, there was an error in our server</h2>
 			<br>
-			<p><a class="btn btn-dark" href="{% url 'home' %}">Back to Home</a></p>
+			<p><a class="btn btn-dark ml-2" href="{% url 'home' %}">Back to Home</a></p>
 		</div>
 	</div>
 
 	{% if sentry_event_id %}
   <script>
-    Sentry.init({ dsn: 'https://b58285a7f22d46c593decf18a1be9bfc@sentry.io/1835898' });
+    Sentry.init({ dsn: "{getdsn}" });
     Sentry.showReportDialog({ eventId: '{{ sentry_event_id }}' })
   </script>
   {% endif %}
 
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 
-<!--
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="utf-8">
-  <script src="https://browser.sentry-cdn.com/5.9.1/bundle.min.js" integrity="sha384-/x1aHz0nKRd6zVUazsV6CbQvjJvr6zQL2CHbQZf3yoLkezyEtZUpqUNnOLW9Nt3v" crossorigin="anonymous"></script>
-</head>
-
-<body>
-  {% if sentry_event_id %}
-  <script>
-    Sentry.init({ dsn: 'https://b58285a7f22d46c593decf18a1be9bfc@sentry.io/1835898' });
-    Sentry.showReportDialog({ eventId: '{{ sentry_event_id }}' })
-  </script>
-  {% endif %}
-</body> This templates was made by Colorlib (https://colorlib.com)
-
-</html>
--->
 </html>
