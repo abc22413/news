@@ -17,7 +17,7 @@
         <a class="btn btn-info" href="{% url 'article_detail' article.pk %}">Read More</a>
       </div>
       <div class="card-footer">
-        {% for comment in article.comments.all|cutupp %}
+        {% for comment in article.comments.all|cutup %}
         <p>
           <span class="font-weight-bold">{{comment.author}} &middot;</span>
           {{comment}}
