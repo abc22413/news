@@ -2,15 +2,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Sentry.io integration
-{% if sentry_event_id %}
-  <script>
-    Sentry.init({ dsn: 'https://b58285a7f22d46c593decf18a1be9bfc@sentry.io/1835898' });
-    Sentry.showReportDialog({ eventId: '{{ sentry_event_id }}' })
-  </script>
-{% endif %}
--->
-
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -20,11 +11,11 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
 
-    <!-- Sentry.io
-    <script src="https://browser.sentry-cdn.com/5.9.1/bundle.min.js" integrity="sha384-/x1aHz0nKRd6zVUazsV6CbQvjJvr6zQL2CHbQZf3yoLkezyEtZUpqUNnOLW9Nt3v" crossorigin="anonymous"></script>
-    -->
-
     <title>{% block title %}Newspaper App{% endblock title %}</title>
+
+    <!-- Favicon -->
+  	<link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+  	<link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}" >
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
