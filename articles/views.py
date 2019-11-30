@@ -19,9 +19,9 @@ class ArticleDetailView(LoginRequiredMixin, DetailView): # new
     login_url = 'login'
 
 class ArticleUpdateView(LoginRequiredMixin, UpdateView): # new
-    model = Article
-    fields = ('title', 'body',)
-    #form_class = ArticleUpdateView
+    #model = Article
+    #fields = ('title', 'body',)
+    form_class = ArticleUpdateView
     template_name = 'article_edit.html'
     login_url = 'login'
 
