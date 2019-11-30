@@ -5,10 +5,11 @@ from .models import *
 from captcha.fields import ReCaptchaField
 
 class CustomUserCreationForm(UserCreationForm):
+
     class Meta(UserCreationForm.Meta):
-        model = CustomUser
-        fields = ('username', 'email', 'age',)
         captcha = ReCaptchaField()
+        model = CustomUser
+        fields = ('username', 'email', 'age', captcha)
 
 class CustomUserChangeForm(UserChangeForm):
     class Meta:
