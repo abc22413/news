@@ -192,4 +192,4 @@ CSP_BASE_URI = "'self'"
 '''
 
 #REFERRER POLICY
-#REFERRER_POLICY = 'strict-origin'
+REFERRER_POLICY = 'strict-origin'
