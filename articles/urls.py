@@ -16,5 +16,3 @@ urlpatterns = [
 
     path('', ArticleListView.as_view(), name='article_list'),
 ]
-
-#handler500 = 'pages.views.handler500'
